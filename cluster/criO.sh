@@ -14,12 +14,12 @@ sysctl --system
 
 # Install prerequisites
 apt-get update
-apt-get install software-properties-common
+apt-get install -y software-properties-common
 
-add-apt-repository ppa:projectatomic/ppa
+add-apt-repository ppa:projectatomic/ppa -y
 apt-get update
 
 # Install CRI-O
-apt-get install cri-o-1.13
+apt-get install -y cri-o-1.13
 
 systemctl start crio

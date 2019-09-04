@@ -8,6 +8,6 @@ EOF
 apt-get update
 apt-get install -y kubelet kubeadm kubectl
 apt-mark hold kubelet kubeadm kubectl
-apt-get update && apt-get upgrade
+apt-get update && apt-get upgrade -y
 systemctl daemon-reload
 systemctl restart kubelet
