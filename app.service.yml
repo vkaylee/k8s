@@ -1,0 +1,13 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: mongodb-service
+  labels:
+    name: mongo
+  namespace: lee
+spec:
+  type:
+  ports:
+    - port: 27017
+      protocol: TCP
+      targetPort: 27017
