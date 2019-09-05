@@ -26,6 +26,10 @@
   ```
   kubectl get nodes
   ```
+  - List all things
+  ```
+  kubectl get all --all-namespaces
+  ```
   - Remove a node from cluster
     - First drain the node
     ```
