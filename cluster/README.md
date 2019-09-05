@@ -51,7 +51,8 @@ TCP	Inbound	30000-32767	NodePort Services**	All
   ```
   kubectl top node
   ```
-  ### Install dashboard https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/
+  ### Install dashboard
+  https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/
 ## Run on Worker:
   ### Open firewall to join to master node
   ```
