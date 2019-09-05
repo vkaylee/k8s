@@ -40,7 +40,7 @@ TCP	Inbound	30000-32767	NodePort Services**	All
   ```
   kubectl apply -f "https://cloud.weave.works/k8s/net?k8s-version=$(kubectl version | base64 | tr -d '\n')"
   ```
-  #### Install a Pod Network (Calico)
+  #### Install a Pod Network (Calico) https://docs.projectcalico.org/v3.5/getting-started/kubernetes/
   ```
   kubectl apply -f https://docs.projectcalico.org/v3.5/getting-started/kubernetes/installation/hosted/etcd.yaml
   kubectl apply -f https://docs.projectcalico.org/v3.5/getting-started/kubernetes/installation/hosted/calico.yaml
