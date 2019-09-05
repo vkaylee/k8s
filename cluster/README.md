@@ -1,7 +1,10 @@
 - bash k8s/cluster/master.sh
 - bash k8s/cluster/workernode.sh
 - Run on Master:
-  - KK
+  - Set up a master node
+  ```
+  kubeadm init [args]
+  ```
 - Run on Worker:
   - Open firewall to join to master node
   ```
