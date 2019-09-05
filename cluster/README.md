@@ -27,3 +27,4 @@
   ```
   iptables -t nat -A OUTPUT -d <Private IP of master node> -j DNAT --to-destination <Public IP of master node>
   ```
+  - https://kubernetes.io/docs/reference/setup-tools/kubeadm/kubeadm-join-phase/
