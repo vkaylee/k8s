@@ -62,4 +62,4 @@ TCP	Inbound	30000-32767	NodePort Services**	All
   iptables -t nat -A OUTPUT -d <Private IP of master node> -j DNAT --to-destination <Public IP of master node>
   ```
   ### References
-    - https://kubernetes.io/docs/reference/setup-tools/kubeadm/kubeadm-join-phase/
+  - https://kubernetes.io/docs/reference/setup-tools/kubeadm/kubeadm-join-phase/
