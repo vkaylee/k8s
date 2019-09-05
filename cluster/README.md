@@ -2,21 +2,25 @@
 ```
 cd k8s/cluster && bash master.sh
 ```
-  - Protocol	Direction	Port Range	Purpose	Used By
-  - TCP	Inbound	6443*	Kubernetes API server	All
-  - TCP	Inbound	2379-2380	etcd server client API	kube-apiserver, etcd
-  - TCP	Inbound	10250	Kubelet API	Self, Control plane
-  - TCP	Inbound	10251	kube-scheduler	Self
-  - TCP	Inbound	10252	kube-controller-manager	Self
+```
+Protocol	Direction	Port Range	Purpose	Used By
+TCP	Inbound	6443*	Kubernetes API server	All
+TCP	Inbound	2379-2380	etcd server client API	kube-apiserver, etcd
+TCP	Inbound	10250	Kubelet API	Self, Control plane
+TCP	Inbound	10251	kube-scheduler	Self
+TCP	Inbound	10252	kube-controller-manager	Self
+```
 ## Create worker node
 ```
 cd k8s/cluster && bash workerNode.sh
 ```
-  - Protocol	Direction	Port Range	Purpose	Used By
-  - TCP	Inbound	10250	Kubelet API	Self, Control plane
-  - TCP	Inbound	30000-32767	NodePort Services**	All
-  ### Run on Master:
-  - ###Documents
+```
+Protocol	Direction	Port Range	Purpose	Used By
+TCP	Inbound	10250	Kubelet API	Self, Control plane
+TCP	Inbound	30000-32767	NodePort Services**	All
+```
+## Run on Master:
+  ### Documents
     - https://kubernetes.io/docs/reference/setup-tools/kubeadm/
   ### Set up a master node
   https://kubernetes.io/docs/reference/setup-tools/kubeadm/kubeadm-init/
@@ -40,18 +44,18 @@ cd k8s/cluster && bash workerNode.sh
   kubectl get all --all-namespaces
   ```
   ### Remove a node from cluster
-    - ####First drain the node
-    ```
-    kubectl drain <node-name>
-    ```
-    - ####You might have to ignore daemonsets and local-data in the machine
-    ```
-    kubectl drain <node-name> --ignore-daemonsets --delete-local-data
-    ```
-    - ####Finally delete the node
-    ```
-    kubectl delete node <node-name>
-    ```
+  - First drain the node
+  ```
+  kubectl drain <node-name>
+  ```
+  - You might have to ignore daemonsets and local-data in the machine
+  ```
+  kubectl drain <node-name> --ignore-daemonsets --delete-local-data
+  ```
+  - Finally delete the node
+  ```
+  kubectl delete node <node-name>
+  ```
 ## Run on Worker:
   ### Open firewall to join to master node
   ```
