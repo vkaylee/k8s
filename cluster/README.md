@@ -34,14 +34,20 @@ TCP	Inbound	30000-32767	NodePort Services**	All
   ```
   kubeadm init --pod-network-cidr=192.168.0.0/16
   ```
-  ### Install network for communicating among pods
-  ```
-  kubectl apply -f "https://cloud.weave.works/k8s/net?k8s-version=$(kubectl version | base64 | tr -d '\n')"
-  ```
-  - Open ports on master node and worker nodes
-  ```
-  TCP 6783 AND UDP 6783/6784
-  ```
+  ### Install network for communicating among pods (Choose only one)
+  #### Install a Pod Network (Weave)
+    ```
+    kubectl apply -f "https://cloud.weave.works/k8s/net?k8s-version=$(kubectl version | base64 | tr -d '\n')"
+    ```
+    - Open ports on master node and worker nodes
+    ```
+    TCP 6783 AND UDP 6783/6784
+    ```
+  #### Install a Pod Network (Calico)
+    ```
+    kubectl apply -f https://docs.projectcalico.org/v3.5/getting-started/kubernetes/installation/hosted/etcd.yaml
+    kubectl apply -f https://docs.projectcalico.org/v3.5/getting-started/kubernetes/installation/hosted/calico.yaml
+    ```
   ### Get the whole command for joining of worker node
   ```
   kubeadm token create --print-join-command
@@ -66,6 +72,15 @@ TCP	Inbound	30000-32767	NodePort Services**	All
   - Docs: https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/
   ```
   kubectl proxy --address='0.0.0.0' --accept-hosts='^*$'
+  ```
+  - Create an admin account called k8s-admin
+  ```
+  kubectl --namespace kube-system create serviceaccount k8s-admin
+  kubectl create clusterrolebinding k8s-admin --serviceaccount=kube-system:k8s-admin --clusterrole=cluster-admin
+  ```
+  - Get the authentication token you need to connect to the dashboard:
+  ```
+  kubectl -n kube-system describe secret $(kubectl -n kube-system get secret | grep k8s-admin | awk '{print $1}')
   ```
   - Access it:
   http://masterIP:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/
