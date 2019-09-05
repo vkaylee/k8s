@@ -35,7 +35,7 @@ TCP	Inbound	30000-32767	NodePort Services**	All
   kubeadm init --pod-network-cidr=192.168.0.0/16
   ```
   ### Install network for communicating among pods (Choose only one)
-  #### Install a Pod Network (Weave)
+  #### Install a Pod Network (Weave) https://www.weave.works/blog/weave-net-kubernetes-integration/
   - Open ports on master node and worker nodes TCP 6783 AND UDP 6783/6784
   ```
   kubectl apply -f "https://cloud.weave.works/k8s/net?k8s-version=$(kubectl version | base64 | tr -d '\n')"
