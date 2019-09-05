@@ -22,6 +22,10 @@
   ```
   kubeadm token create --print-join-command
   ```
+  - List all nodes
+  ```
+  kubectl get nodes
+  ```
   - Remove a node from cluster
     - First drain the node
     ```
