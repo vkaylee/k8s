@@ -47,6 +47,10 @@ TCP	Inbound	30000-32767	NodePort Services**	All
   ```
   kubectl delete node <node-name>
   ```
+  ### View cluster resources
+  ```
+  kubectl top node
+  ```
 ## Run on Worker:
   ### Open firewall to join to master node
   ```
