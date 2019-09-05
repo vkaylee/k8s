@@ -1,2 +1,2 @@
-bash k8s/cluster/master.sh
-bash k8s/cluster/workernode.sh
+- bash k8s/cluster/master.sh
+- bash k8s/cluster/workernode.sh
