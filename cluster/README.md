@@ -11,6 +11,7 @@
   - TCP	Inbound	30000-32767	NodePort Services**	All
 - Run on Master:
   - Set up a master node
+  https://kubernetes.io/docs/reference/setup-tools/kubeadm/kubeadm-init/
   ```
   kubeadm init [args]
   ```
