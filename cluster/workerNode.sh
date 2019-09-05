@@ -8,3 +8,4 @@ source "${workDir}/criO.sh"
 source "${workDir}/containerd.sh"
 # shellcheck disable=SC1090
 source "${workDir}/kubeTools.sh"
+reboot
