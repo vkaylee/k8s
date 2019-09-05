@@ -27,6 +27,9 @@ TCP	Inbound	30000-32767	NodePort Services**	All
   ```
   kubeadm init [args]
   ```
+  ```
+  kubeadm init --advertise-address <Master public IP>
+  ```
   ### Install network for communicating among pods
   ```
   kubectl apply -f "https://cloud.weave.works/k8s/net?k8s-version=$(kubectl version | base64 | tr -d '\n')"
