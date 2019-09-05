@@ -53,10 +53,11 @@ TCP	Inbound	30000-32767	NodePort Services**	All
   ```
   ### Install dashboard
   - Docs: https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/
-  - Access it:
   ```
   kubectl proxy --address='0.0.0.0' --accept-hosts='^*$'
   ```
+  - Access it:
+  http://masterIP:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/
 ## Run on Worker:
   ### Open firewall to join to master node
   ```
