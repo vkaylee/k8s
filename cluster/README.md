@@ -1,3 +1,7 @@
+## Clone this git
+```
+git clone https://github.com/vleedev/k8s.git
+```
 ## Create master node
 ```
 cd k8s/cluster && bash master.sh
