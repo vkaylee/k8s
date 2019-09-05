@@ -34,6 +34,10 @@ TCP	Inbound	30000-32767	NodePort Services**	All
   ```
   kubectl apply -f "https://cloud.weave.works/k8s/net?k8s-version=$(kubectl version | base64 | tr -d '\n')"
   ```
+  - Open ports on master node and worker nodes
+  ```
+  TCP 6783 AND UDP 6783/6784
+  ```
   ### Get the whole command for joining of worker node
   ```
   kubeadm token create --print-join-command
