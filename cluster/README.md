@@ -5,6 +5,10 @@
   ```
   kubeadm init [args]
   ```
+  - Install network for communicating among pods
+  ```
+  kubectl apply -f "https://cloud.weave.works/k8s/net?k8s-version=$(kubectl version | base64 | tr -d '\n')"
+  ```
 - Run on Worker:
   - Open firewall to join to master node
   ```
