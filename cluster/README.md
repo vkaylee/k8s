@@ -22,6 +22,19 @@
   ```
   kubeadm token create --print-join-command
   ```
+  - Remove a node from cluster
+    - First drain the node
+    ```
+    kubectl drain <node-name>
+    ```
+    - You might have to ignore daemonsets and local-data in the machine
+    ```
+    kubectl drain <node-name> --ignore-daemonsets --delete-local-data
+    ```
+    - Finally delete the node
+    ```
+    kubectl delete node <node-name>
+    ```
 - Run on Worker:
   - Open firewall to join to master node
   ```
