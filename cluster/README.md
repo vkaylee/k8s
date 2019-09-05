@@ -27,7 +27,7 @@ TCP	Inbound	30000-32767	NodePort Services**	All
   ### Documents
   - https://kubernetes.io/docs/reference/setup-tools/kubeadm/
   ### Set up a master node
-  https://kubernetes.io/docs/reference/setup-tools/kubeadm/kubeadm-init/
+  - https://kubernetes.io/docs/reference/setup-tools/kubeadm/kubeadm-init/
   ```
   kubeadm init [args]
   ```
@@ -36,18 +36,15 @@ TCP	Inbound	30000-32767	NodePort Services**	All
   ```
   ### Install network for communicating among pods (Choose only one)
   #### Install a Pod Network (Weave)
-    ```
-    kubectl apply -f "https://cloud.weave.works/k8s/net?k8s-version=$(kubectl version | base64 | tr -d '\n')"
-    ```
-    - Open ports on master node and worker nodes
-    ```
-    TCP 6783 AND UDP 6783/6784
-    ```
+  - Open ports on master node and worker nodes TCP 6783 AND UDP 6783/6784
+  ```
+  kubectl apply -f "https://cloud.weave.works/k8s/net?k8s-version=$(kubectl version | base64 | tr -d '\n')"
+  ```
   #### Install a Pod Network (Calico)
-    ```
-    kubectl apply -f https://docs.projectcalico.org/v3.5/getting-started/kubernetes/installation/hosted/etcd.yaml
-    kubectl apply -f https://docs.projectcalico.org/v3.5/getting-started/kubernetes/installation/hosted/calico.yaml
-    ```
+  ```
+  kubectl apply -f https://docs.projectcalico.org/v3.5/getting-started/kubernetes/installation/hosted/etcd.yaml
+  kubectl apply -f https://docs.projectcalico.org/v3.5/getting-started/kubernetes/installation/hosted/calico.yaml
+  ```
   ### Get the whole command for joining of worker node
   ```
   kubeadm token create --print-join-command
