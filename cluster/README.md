@@ -21,7 +21,7 @@ TCP	Inbound	30000-32767	NodePort Services**	All
 ```
 ## Run on Master:
   ### Documents
-    - https://kubernetes.io/docs/reference/setup-tools/kubeadm/
+  - https://kubernetes.io/docs/reference/setup-tools/kubeadm/
   ### Set up a master node
   https://kubernetes.io/docs/reference/setup-tools/kubeadm/kubeadm-init/
   ```
