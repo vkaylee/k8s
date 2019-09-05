@@ -28,7 +28,7 @@ TCP	Inbound	30000-32767	NodePort Services**	All
   kubeadm init [args]
   ```
   ```
-  kubeadm init --pod-network-cidr=192.168.0.0/16 --apiserver-advertise-address <Master public IP>
+  kubeadm init --pod-network-cidr=192.168.0.0/16
   ```
   ### Install network for communicating among pods
   ```
