@@ -44,15 +44,6 @@ TCP	Inbound	30000-32767	NodePort Services**	All
   kubectl get all --all-namespaces
   ```
   ### Remove a node from cluster
-  - First drain the node
-  ```
-  kubectl drain <node-name>
-  ```
-  - You might have to ignore daemonsets and local-data in the machine
-  ```
-  kubectl drain <node-name> --ignore-daemonsets --delete-local-data
-  ```
-  - Finally delete the node
   ```
   kubectl delete node <node-name>
   ```
