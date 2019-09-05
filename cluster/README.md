@@ -18,6 +18,10 @@
   ```
   kubectl apply -f "https://cloud.weave.works/k8s/net?k8s-version=$(kubectl version | base64 | tr -d '\n')"
   ```
+  - Get the whole command for joining of worker node
+  ```
+  kubeadm token create --print-join-command
+  ```
 - Run on Worker:
   - Open firewall to join to master node
   ```
