@@ -46,3 +46,31 @@ stream {
 ```
 docker run -d --restart=unless-stopped -p 80:80 -p 443:443 -v /etc/nginx.conf:/etc/nginx/nginx.conf nginx:1.16
 ```
+### Install Kubernetes with RKE
+- Create the rancher-cluster.yml file
+```
+nodes:
+  - address: 165.227.114.63
+    internal_address: 172.16.22.12
+    user: ubuntu
+    role: [controlplane,worker,etcd]
+  - address: 165.227.116.167
+    internal_address: 172.16.32.37
+    user: ubuntu
+    role: [controlplane,worker,etcd]
+  - address: 165.227.127.226
+    internal_address: 172.16.42.73
+    user: ubuntu
+    role: [controlplane,worker,etcd]
+
+services:
+  etcd:
+    snapshot: true
+    creation: 6h
+    retention: 24h
+```
+- Download RKE
+```
+wget https://github.com/rancher/rke/releases/download/v0.2.8/rke_linux-amd64 && chmod 755 rke_linux-amd64
+```
+
