@@ -1,4 +1,8 @@
 # RANCHER (The tool manages k8s)
+## Install docker first
+```
+locale-gen UTF-8 && apt update && apt install git -y && git clone https://github.com/vleedev/k8s.git && bash k8s/docker/docker.sh
+```
 ## Single Node Install
 ```
 docker run -d --restart=unless-stopped -p 8889:443 -v /root/ssl/vlee.dev/privkey1.pem:/etc/rancher/ssl/key.pem -v /root/ssl/vlee.dev/fullchain1.pem:/etc/rancher/ssl/cert.pem rancher/rancher:latest --no-cacerts
