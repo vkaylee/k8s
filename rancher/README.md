@@ -7,6 +7,7 @@ docker run -d --restart=unless-stopped -p 8889:443 -v /root/ssl/vlee.dev/privkey
 ### Create Nodes and Load Balancer
 #### Install Nginx
 ```
+apt update \
 apt install -y curl gnupg2 ca-certificates lsb-release \
 echo "deb http://nginx.org/packages/debian `lsb_release -cs` nginx" \
     | tee /etc/apt/sources.list.d/nginx.list
