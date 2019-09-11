@@ -109,8 +109,7 @@ sudo apt-get install -y kubectl
 ```
 - Install helm
 ```
-sudo apt install -y snapd
-sudo snap install helm --classic
+curl -L https://git.io/get_helm.sh | bash
 ```
 - Create ssh key gen
 ```
