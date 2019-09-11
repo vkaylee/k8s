@@ -5,7 +5,7 @@ sudo apt update
 sudo apt install git -y
 git clone https://github.com/vleedev/k8s.git
 bash k8s/docker/docker.sh
-sudo usermod -aG docker $USER
+sudo usermod -aG docker admin
 sudo reboot
 ```
 # RANCHER (The tool manages k8s)
