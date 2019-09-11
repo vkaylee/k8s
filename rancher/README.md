@@ -1,7 +1,7 @@
 # RANCHER (The tool manages k8s)
 ## Install docker first
 ```
-locale-gen UTF-8 && apt update && apt install git -y && git clone https://github.com/vleedev/k8s.git && bash k8s/docker/docker.sh
+sudo locale-gen UTF-8 && sudo apt update && sudo apt install git -y && git clone https://github.com/vleedev/k8s.git && sudo bash k8s/docker/docker.sh
 ```
 ## Single Node Install
 ```
