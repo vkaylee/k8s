@@ -83,7 +83,7 @@ wget https://github.com/rancher/rke/releases/download/v0.2.8/rke_linux-amd64 && 
 ```
 - Set up RKE
 ```
-rke_linux-amd64 up --config ./rancher-cluster.yml
+./rke_linux-amd64 up --config ./rancher-cluster.yml
 ```
 - Create the kube_config_rancher-cluster.yml file
 ```
