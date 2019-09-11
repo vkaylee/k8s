@@ -97,3 +97,7 @@ sudo apt-get install -y kubectl
 apt install -y snapd
 snap install helm --classic
 ```
+- Create ssh key gen
+```
+ssh-keygen -t rsa -b 4096 -C "system@vlee.dev" -N
+```
