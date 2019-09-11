@@ -11,6 +11,9 @@ docker run -d --restart=unless-stopped -p 8889:443 -v /root/ssl/vlee.dev/privkey
 ### Create Nodes and Load Balancer
 - Make file /etc/nginx.conf
 ```
+sudo nano /etc/nginx.conf
+```
+```
 worker_processes 4;
 worker_rlimit_nofile 40000;
 
