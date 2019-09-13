@@ -1,0 +1,17 @@
+version: "3"
+services:
+  loadbalancing-haproxy:
+    image: haproxy:alpine
+    container_name: c-loadbalancing-haproxy
+    networks:
+      - loadbalancing # name of network
+    restart: always
+    hostname: loadbalancing-haproxy
+    volumes:
+      - "$PWD/haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg"
+    ports:
+      - "1-21:1-21"
+      - "23-65535:23-65535"
+networks: # Create a network
+  loadbalancing: # Name of network
+    driver: bridge # Driver of network
