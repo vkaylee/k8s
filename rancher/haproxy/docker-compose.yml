@@ -10,8 +10,8 @@ services:
     volumes:
       - "$PWD/haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg"
     ports:
-      - "1-21:1-21"
-      - "23-65535:23-65535"
+      - "80:80"
+      - "443:443"
 networks: # Create a network
   loadbalancing: # Name of network
     driver: bridge # Driver of network
