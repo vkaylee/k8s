@@ -7,7 +7,6 @@ services:
       - loadbalancing # name of network
     restart: always
     hostname: loadbalancing-haproxy
-    CMD mkdir /var/lib/haproxy
     volumes:
       - "$PWD/libhaproxy:/var/lib/haproxy"
       - "$PWD/haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg"
