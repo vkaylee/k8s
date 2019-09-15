@@ -89,7 +89,7 @@ services:
 ```
 - Download RKE
 ```
-wget https://github.com/rancher/rke/releases/download/v0.2.8/rke_linux-amd64 && chmod 755 rke_linux-amd64
+wget https://github.com/rancher/rke/releases/download/v0.2.8/rke_linux-amd64 && chmod 755 rke_linux-amd64 && mv rke_linux-amd64 rke
 ```
 - Set up RKE
 ```
