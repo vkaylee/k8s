@@ -72,14 +72,17 @@ nodes:
     internal_address: 172.16.22.12
     user: ubuntu
     role: [controlplane,worker,etcd]
+    ssh_key_path: ~/.ssh/id_rsa
   - address: 165.227.116.167
     internal_address: 172.16.32.37
     user: ubuntu
     role: [controlplane,worker,etcd]
+    ssh_key_path: ~/.ssh/id_rsa
   - address: 165.227.127.226
     internal_address: 172.16.42.73
     user: ubuntu
     role: [controlplane,worker,etcd]
+    ssh_key_path: ~/.ssh/id_rsa
 
 services:
   etcd:
