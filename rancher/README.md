@@ -12,7 +12,7 @@ sudo reboot
 ## Install docker first
 - Install
 ```
-sudo locale-gen UTF-8 && sudo apt update && sudo apt install git -y && git clone https://github.com/vleedev/k8s.git && bash k8s/docker/docker.sh
+sudo locale-gen UTF-8 && sudo apt update && sudo apt install git -y && git clone https://github.com/vleedev/k8s.git && cd k8s/docker && bash docker.sh
 ```
 - Make normal user can exec docker
 ```
