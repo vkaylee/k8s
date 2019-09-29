@@ -116,5 +116,5 @@ curl -L https://git.io/get_helm.sh | bash
 ```
 - Create ssh key gen
 ```
-ssh-keygen -t rsa -b 4096 -C "system@vlee.dev" -N
+ssh-keygen -t rsa -b 4096 -C "system@vlee.dev"
 ```
