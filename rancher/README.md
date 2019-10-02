@@ -94,9 +94,17 @@ services:
 ```
 wget https://github.com/rancher/rke/releases/download/v0.2.8/rke_linux-amd64 && chmod +x rke_linux-amd64 && mv rke_linux-amd64 rke && sudo mv rke /usr/local/bin
 ```
-- Set up RKE
+- Set up RKE with default file name "cluster.yml"
+```
+rke up
+```
+- Set up RKE with custom file name
 ```
 rke up --config ./rancher-cluster.yml
+```
+- Update your cluster
+```
+rke up --update-only --config ./rancher-cluster.yml 
 ```
 - Create the kube_config_rancher-cluster.yml file
 ```
