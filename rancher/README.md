@@ -98,7 +98,7 @@ wget https://github.com/rancher/rke/releases/download/v0.2.8/rke_linux-amd64 && 
 ```
 rke up
 ```
-- Set up RKE with custom file name
+- Set up RKE with custom file config
 ```
 rke up --config ./rancher-cluster.yml
 ```
