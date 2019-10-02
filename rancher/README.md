@@ -4,7 +4,7 @@ sudo locale-gen UTF-8
 sudo apt update
 sudo apt install git -y
 git clone https://github.com/vleedev/k8s.git
-bash k8s/docker/docker.sh
+cd k8s/docker && bash docker.sh
 sudo usermod -aG docker admin
 sudo reboot
 ```
